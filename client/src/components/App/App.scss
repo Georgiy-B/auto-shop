@@ -1,0 +1,29 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fafafa;
+
+  header {
+    flex: 0 0 auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+
+    .sidebar {
+      width: 300px; //TODO
+    }
+
+    .content {
+      flex: 1;
+      padding: 10px;
+    }
+  }
+
+  footer {
+    flex: 0 0 auto;
+  }
+}

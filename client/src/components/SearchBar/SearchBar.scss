@@ -1,0 +1,36 @@
+.search-bar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background: white;
+  border: 1px solid white;
+  border-radius: 5px;
+
+  input {
+    flex: 1 0 auto;
+    background: none;
+    border: none;
+    line-height: 1.5;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    height: 24px;
+    background: none;
+    border: none;
+    opacity: 0.5;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+}

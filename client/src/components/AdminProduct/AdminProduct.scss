@@ -1,0 +1,33 @@
+@mixin min-size {
+  min-width: 300px;
+  min-height: 400px;
+}
+
+.admin-product {
+  display: flex;
+  flex-flow: row wrap;
+
+  .material-card {
+    margin: 5px;
+  }
+
+  .admin-product-image {
+    @include min-size;
+    flex: 1 30%;
+  }
+
+  .admin-product-info {
+    @include min-size;
+    flex: 2 30%;
+
+    .admin-product-info-form {
+      padding: 10px;
+    }
+  }
+
+  .product-hostory {
+    @include min-size;
+    flex: 1 30%
+  }
+
+}

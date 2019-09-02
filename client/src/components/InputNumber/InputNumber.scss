@@ -1,0 +1,57 @@
+$padding: 15px;
+
+.input-number {
+  display: block;
+  position: relative;
+  font-size: 18px;
+  padding-top: $padding;
+
+  .border {
+    height: 2px;
+    width: 100%;
+    background: #0077FF;
+    transform: scale(0);
+    transform-origin: 0 0;
+    transition: transform .2s ease;
+  }
+
+  .required {
+    color: red;
+    font-size: 0.75em;
+    padding-top: 5px;
+  }
+
+  .label {
+    position: absolute;
+    top: $padding;
+    left: 0;
+    transform-origin: top left;
+    transition: transform .2s ease;
+    color: #C8CCD4;
+    cursor: text;
+  }
+
+  input {
+    font-size: inherit;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #C8CCD4;
+    margin-bottom: -2px;
+    
+    &:focus,
+    &.has-value {
+      outline: none;
+
+      ~ .label {
+        color: #0077FF;
+        transform: translate(0, -15px) scale(.75);
+      }
+
+      ~ .border {
+        transform: scale(1);
+      }
+    }
+  }
+
+}

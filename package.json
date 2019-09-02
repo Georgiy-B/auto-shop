@@ -1,0 +1,24 @@
+{
+  "name": "auto-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd client && npm run build && cd .. && npm run server",
+    "server": "node ./server/index.js",
+    "client": "cd client && npm run start && cd ..",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.14.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "formidable": "^1.2.1",
+    "mongoose": "^5.6.2"
+  }
+}

@@ -1,0 +1,48 @@
+.image-uploader {
+  display: block;
+  min-width: 64px;
+  min-height: 64px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover > .upload-icon > img {
+    visibility: visible;
+    opacity: 0.5;
+  }
+
+  .upload-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      visibility: hidden;
+      width: 64px;
+  
+      &.visible {
+        visibility: visible;
+      }
+    }
+
+  }
+
+  input {
+    display: none;
+  }
+}

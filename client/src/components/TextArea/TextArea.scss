@@ -1,0 +1,78 @@
+$text-area-padding: 25px;
+$wrapper-padding: 5px;
+
+.text-area {
+  font-size: 18px;
+  padding-top: $text-area-padding;
+
+  .required {
+    color: red;
+    font-size: 0.75em;
+    padding-top: 5px;
+  }
+
+  .textarea-wrapper {
+    display: block;
+    position: relative;
+    padding: $wrapper-padding 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    .label {
+      position: absolute;
+      top: $wrapper-padding;
+      transform-origin: top left;
+      transition: transform .2s ease;
+      color: #C8CCD4;
+      cursor: text;
+    }
+
+    textarea {
+      display: block;
+      width: 100%;
+      margin: -5px -1px;
+      padding: 0;
+      border: none;
+      background: none;
+      border-bottom: 2px solid #C8CCD4;
+      border-top: 2px solid #C8CCD4;
+      font-size: inherit;
+      resize: none;
+      
+      &:focus,
+      &.has-value {
+        outline: none;
+
+        ~ .label {
+          color: #0077FF;
+          transform: translate(0, -$text-area-padding) scale(.75);
+        }
+        
+        ~ .border {
+          transform: scale(1);
+        }
+
+      }
+    }
+
+    .border {
+      position: absolute;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: #0077FF;
+      transform: scale(0);
+      transform-origin: 0 0;
+      transition: transform .2s ease;
+    }
+  
+    .border-top {
+      top: 0;
+    }
+  
+    .border-bottom {
+      bottom: 0;
+    }
+  }
+}
