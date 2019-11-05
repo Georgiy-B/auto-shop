@@ -19,6 +19,6 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "formidable": "^1.2.1",
-    "mongoose": "^5.6.2"
+    "mongoose": "^5.7.5"
   }
 }
